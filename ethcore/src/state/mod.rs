@@ -215,7 +215,6 @@ const SEC_TRIE_DB_UNWRAP_STR: &'static str = "A state can only be created with v
 
 impl State {
 	/// Creates new state with empty state root
-	#[cfg(test)]
 	pub fn new(mut db: StateDB, account_start_nonce: U256, factories: Factories) -> State {
 		let mut root = H256::new();
 		{
