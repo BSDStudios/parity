@@ -147,7 +147,7 @@ mod blooms;
 mod basic_types;
 mod env_info;
 pub mod pod_account;
-mod state;
+pub mod state;
 pub mod state_db;
 pub mod account_db;
 mod builtin;
