@@ -305,6 +305,14 @@ impl StateDB {
 		}
 	}
 
+	pub fn clear_cache(&mut self) {
+		let mut cache = self.account_cache.lock();
+		let mut cache = &mut *cache;
+
+		cache.accounts.clear();
+		cache.modifications.clear();
+	}
+
 	/// Returns an interface to HashDB.
 	pub fn as_hashdb(&self) -> &HashDB {
 		self.db.as_hashdb()
